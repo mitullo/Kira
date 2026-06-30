@@ -1169,7 +1169,7 @@ local function walkTreeBatched(root, isCurrent, visit, batchSize)
 end
 
 -- Edit this constant for Auto Death Note speed. Higher = slower.
-local AUTO_DEATH_NOTE_DELAY = 2
+local AUTO_DEATH_NOTE_DELAY = 2.6
 
 -- The worker is intentionally single-instance. It stays enabled through lobby/intermission,
 -- pauses while a round is unavailable, and wakes as soon as a Map/active GamePhase appears.
