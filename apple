@@ -1,1 +1,31 @@
-loadstring(game:HttpGet("https://obfuscator-theta.vercel.app/api/raw?id=Yn6GPG_ODyTolosu&key=jcnL07lHaCZYfTuD1dtnW-BXwGQ5lHLu"))()
+local requestFn =
+	(syn and syn.request)
+	or (http and http.request)
+	or http_request
+	or request
+
+if not requestFn then
+	error("Your executor does not support requests")
+end
+
+local response = requestFn({
+	Url = "https://obfuscator-theta.vercel.app/api/raw?id=Yn6GPG_ODyTolosu&key=elqG65izWZo-4-cT1VNLiCovZd5uDvNM",
+	Method = "GET",
+	Headers = {
+		["X-Apple-Loader"] = "true"
+	}
+})
+
+local source = response.Body or response.body
+
+if type(source) ~= "string" then
+	error("Failed to download script")
+end
+
+local fn, err = loadstring(source)
+
+if not fn then
+	error(err)
+end
+
+fn()
